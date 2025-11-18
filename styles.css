@@ -293,9 +293,26 @@ h6 {
   letter-spacing: 1px;
 }
 
+/* Mobile first */
 .deporte-card img {
-  transition: all 0.3s ease;
+  width: 100%;
+  height: 260px;     /* Altura cómoda para celulares */
+  object-fit: cover;
   border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Tablet y Desktop */
+@media (min-width: 768px) {
+  .deporte-card img {
+    height: 350px;   /* Ajuste intermedio */
+  }
+}
+
+@media (min-width: 992px) {
+  .deporte-card img {
+    height: 500px;   /* Altura grande en desktop */
+  }
 }
 
 .deporte-card:hover img {
